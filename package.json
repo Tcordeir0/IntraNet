@@ -1,0 +1,27 @@
+{
+  "name": "logistics-management-hub-showcase",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Professional Showcase of a Logistics Management System",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.89.0",
+    "@tanstack/react-query": "^5.83.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "recharts": "^2.15.4",
+    "tailwind-merge": "^2.6.0",
+    "lucide-react": "^0.462.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "vite": "^5.4.19"
+  }
+}
