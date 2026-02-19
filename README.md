@@ -65,6 +65,8 @@ The platform was built with a **mobile-first mindset** and is fully installable 
 
 The platform features a modern, clean interface with full **dark/light mode** and **mobile responsiveness**.
 
+### 🖥️ Desktop
+
 <p align="center">
   <img src="screenshots/preview-1.jpg" width="400" alt="Dashboard Overview" />
   <img src="screenshots/preview-2.jpg" width="400" alt="Attendance History & SLA" />
@@ -83,6 +85,21 @@ The platform features a modern, clean interface with full **dark/light mode** an
 </p>
 <p align="center">
   <img src="screenshots/preview-9.jpg" width="400" alt="IT Room Inventory" />
+</p>
+
+### 📱 Mobile (iPhone — PWA)
+
+> All views captured running as an installed PWA on iPhone, demonstrating dark mode, responsive layouts, and touch-optimized navigation.
+
+<p align="center">
+  <img src="screenshots/mobile-1.jpg" width="180" alt="Login Screen — Dark Mode" />
+  <img src="screenshots/mobile-2.jpg" width="180" alt="Sidebar Drawer — Swipe Navigation" />
+  <img src="screenshots/mobile-3.jpg" width="180" alt="Dashboard — KPI Cards" />
+</p>
+<p align="center">
+  <img src="screenshots/mobile-4.jpg" width="180" alt="Dashboard — Weekly Trend & SLA Donut" />
+  <img src="screenshots/mobile-5.jpg" width="180" alt="New Ticket Form — Mobile" />
+  <img src="screenshots/mobile-6.jpg" width="180" alt="Asset Monitoring — Mobile" />
 </p>
 
 ---

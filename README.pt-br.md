@@ -65,6 +65,8 @@ A plataforma foi construída com mentalidade **mobile-first** e é totalmente in
 
 A plataforma possui uma interface moderna com suporte completo ao **modo claro/escuro** e **responsividade mobile**.
 
+### 🖥️ Desktop
+
 <p align="center">
   <img src="screenshots/preview-1.jpg" width="400" alt="Visão Geral do Dashboard" />
   <img src="screenshots/preview-2.jpg" width="400" alt="Histórico e SLA" />
@@ -83,6 +85,21 @@ A plataforma possui uma interface moderna com suporte completo ao **modo claro/e
 </p>
 <p align="center">
   <img src="screenshots/preview-9.jpg" width="400" alt="Inventário da Sala de TI" />
+</p>
+
+### 📱 Mobile (iPhone — PWA)
+
+> Todas as telas capturadas rodando como PWA instalado no iPhone, demonstrando o modo escuro, layouts responsivos e navegação otimizada para toque.
+
+<p align="center">
+  <img src="screenshots/mobile-1.jpg" width="180" alt="Tela de Login — Dark Mode" />
+  <img src="screenshots/mobile-2.jpg" width="180" alt="Sidebar Drawer — Navegação por Swipe" />
+  <img src="screenshots/mobile-3.jpg" width="180" alt="Dashboard — Cards de KPI" />
+</p>
+<p align="center">
+  <img src="screenshots/mobile-4.jpg" width="180" alt="Dashboard — Tendência Semanal & Donut SLA" />
+  <img src="screenshots/mobile-5.jpg" width="180" alt="Novo Chamado — Mobile" />
+  <img src="screenshots/mobile-6.jpg" width="180" alt="Monitoramento de Ativos — Mobile" />
 </p>
 
 ---
