@@ -18,7 +18,8 @@
   <img src="https://img.shields.io/badge/Supabase-BaaS-3ECF8E?style=flat-square&logo=supabase&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-5.x-646CFF?style=flat-square&logo=vite&logoColor=white" />
   <img src="https://img.shields.io/badge/TailwindCSS-3.x-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-RLS-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/PWA-Ready-5A0FC8?style=flat-square&logo=pwa&logoColor=white" />
+  <img src="https://img.shields.io/badge/Mobile-Responsive-green?style=flat-square&logo=android&logoColor=white" />
 </p>
 
 ---
@@ -31,7 +32,7 @@
 - 💻 **IT Asset Monitoring** — Real-time hardware and device monitoring with telemetry via WebSocket agents.
 - 👥 **User & Department Management** — Centralized management of employees, roles, and sector hierarchies.
 - 📦 **Inventory Control** — Real-time tracking of materials, equipment, and resources.
-- 📊 **Executive Analytics** — Performance dashboards and operational KPI metrics.
+- 📊 **Executive Analytics** — Performance dashboards and operational KPI metrics (MTTR, SLA, Volume Trends).
 - 🔔 **Integrated Notifications** — Native push notifications and external webhooks for cross-system alerts.
 - 💬 **Internal Chat** — Real-time messaging integrated directly into ticket workflows.
 
@@ -41,28 +42,47 @@ To serve as a **unified hub** for communication and operations management, conso
 
 ---
 
+## 📱 Mobile & PWA Support
+
+The platform was built with a **mobile-first mindset** and is fully installable as a Progressive Web App:
+
+| Feature | Details |
+|---|---|
+| **PWA Installable** | Works as a native app on Android & iOS via browser prompt |
+| **Offline Support** | Service Worker with network-first + cache fallback strategy |
+| **Touch Gestures** | Swipe from left edge to open/close sidebar |
+| **iOS Safe Area** | Supports notch & Dynamic Island via `env(safe-area-inset-*)` |
+| **Responsive Layout** | Adaptive sidebar (drawer on mobile, fixed on desktop) |
+| **Swipe Kanban** | Column-to-column navigation via touch swipe with scroll-snap |
+| **Mobile Toasts** | Swipe-to-dismiss notifications with Sonner |
+| **Adaptive Cards** | Ticket list switches to card layout on mobile vs table on desktop |
+
+> The system runs seamlessly across **Android, iOS (iPhone/iPad), and all screen sizes from 320px to 1920px+**.
+
+---
+
 ## 🖼️ Visual Preview
 
-The platform features a modern, clean interface with full **dark/light mode** support.
+The platform features a modern, clean interface with full **dark/light mode** and **mobile responsiveness**.
 
 <p align="center">
   <img src="screenshots/preview-1.jpg" width="400" alt="Dashboard Overview" />
-  <img src="screenshots/preview-2.jpg" width="400" alt="Kanban Board" />
+  <img src="screenshots/preview-2.jpg" width="400" alt="Attendance History & SLA" />
 </p>
 <p align="center">
-  <img src="screenshots/preview-3.jpg" width="400" alt="Ticket Detail" />
+  <img src="screenshots/preview-3.jpg" width="400" alt="Reports & Analytics" />
   <img src="screenshots/preview-4.jpg" width="400" alt="Asset Monitoring" />
 </p>
 <p align="center">
-  <img src="screenshots/preview-5.jpg" width="400" alt="User Management" />
-  <img src="screenshots/preview-6.jpg" width="400" alt="Analytics Dashboard" />
+  <img src="screenshots/preview-5.jpg" width="400" alt="New Ticket Form" />
+  <img src="screenshots/preview-6.jpg" width="400" alt="User Management" />
 </p>
 <p align="center">
-  <img src="screenshots/preview-7.jpg" width="400" alt="Dark Mode" />
-  <img src="screenshots/preview-8.jpg" width="400" alt="Notifications" />
+  <img src="screenshots/preview-7.jpg" width="400" alt="Changelog Modal" />
+  <img src="screenshots/preview-8.jpg" width="400" alt="User Profile" />
 </p>
 <p align="center">
-  <img src="screenshots/preview-9.jpg" width="400" alt="Internal Chat" />
+  <img src="screenshots/preview-9.jpg" width="400" alt="IT Room Inventory" />
 </p>
 
 ---
@@ -74,7 +94,7 @@ The platform follows a modern **serverless-first** approach combined with real-t
 ```
 ┌─────────────────────────────────────────────────────┐
 │                  React 18 + TypeScript               │
-│              (Vite + Tailwind + shadcn/ui)           │
+│         (Vite + Tailwind + shadcn/ui + PWA)          │
 └────────────────────────┬────────────────────────────┘
                          │
            ┌─────────────┼─────────────┐
@@ -100,6 +120,7 @@ The platform follows a modern **serverless-first** approach combined with real-t
 | Telemetry | Custom Node.js WebSocket Server |
 | Charts | Recharts |
 | Drag-and-Drop | @hello-pangea/dnd |
+| Mobile / PWA | Service Worker, Web App Manifest |
 
 ---
 
@@ -107,17 +128,19 @@ The platform follows a modern **serverless-first** approach combined with real-t
 
 ### Frontend
 - **React 18 & TypeScript:** For robust and type-safe UI development.
-- **React Query:** Advanced server-side state management with caching and background refetching.
+- **React Query:** Advanced server-side state management with caching, background refetching, and optimistic updates.
 - **Tailwind CSS & shadcn/ui:** Consistent, accessible, and high-performance component library.
 - **Recharts:** Complex data visualization for operational metrics and KPI dashboards.
 - **@hello-pangea/dnd:** Fluid drag-and-drop experience for Kanban boards.
+- **Sonner:** Toast notifications with native swipe-to-dismiss on mobile.
 
 ### Backend & Infrastructure
 - **Supabase Cloud:** Integrated database, authentication, storage, and realtime engine.
 - **PostgreSQL RLS:** Row-Level Security enforcing multi-tenant data isolation at the database level.
-- **Real-time Engine:** Supabase Realtime subscriptions for instant UI updates across all clients.
-- **Edge Computing:** Deno-based serverless functions for critical business logic (notifications, geocoding).
+- **Real-time Engine:** Supabase Realtime with debounced subscriptions for instant UI updates across all clients.
+- **Edge Computing:** Deno-based serverless functions for critical business logic (notifications, geocoding, secure profile resolution).
 - **WebSocket Server:** Custom Node.js agent for high-frequency hardware telemetry data.
+- **Service Worker:** Manual implementation with network-first + cache fallback for offline support.
 
 ---
 
@@ -130,6 +153,7 @@ The platform follows a modern **serverless-first** approach combined with real-t
 | **Row-Level Security** | Policies enforced directly at the PostgreSQL level |
 | **Data Encryption** | Secure handling of sensitive telemetry and user data |
 | **Input Validation** | Zod schema validation on all form inputs |
+| **View-only Mode** | Chat and drag-and-drop locked for read-only Kanban users |
 
 ---
 
@@ -137,13 +161,14 @@ The platform follows a modern **serverless-first** approach combined with real-t
 
 | Module | Description | Status |
 |---|---|---|
-| 🎫 Ticketing / Kanban | Full lifecycle ticket management | ✅ Production |
-| 💻 Asset Telemetry | Real-time hardware monitoring | ✅ Production |
+| 🎫 Ticketing / Kanban | Full lifecycle ticket management with SLA | ✅ Production |
+| 💻 Asset Telemetry | Real-time hardware monitoring via WebSocket | ✅ Production |
 | 👥 User Management | RBAC + department hierarchy | ✅ Production |
-| 📊 Analytics Dashboard | KPIs, MTTR, SLA compliance | ✅ Production |
+| 📊 Analytics Dashboard | KPIs, MTTR, SLA compliance charts | ✅ Production |
 | 🔔 Notifications | Push + Webhook integration | ✅ Production |
 | 💬 Internal Chat | Real-time messaging per ticket | ✅ Production |
-| 📦 Inventory | Materials and resources tracking | ✅ Production |
+| 📦 Inventory | Materials and resources tracking + Excel export | ✅ Production |
+| 📱 PWA | Installable app with offline support | ✅ Production |
 
 ---
 
@@ -170,13 +195,14 @@ The platform follows a modern **serverless-first** approach combined with real-t
 
 > Interested in the full implementation or have any questions?
 
+**Talys Matheus Cordeiro Silva (Tcordeiro)**  
 Feel free to reach out via [GitHub](https://github.com/Tcordeir0) or connect on [LinkedIn](https://www.linkedin.com/in/thalescordeiro/).
 
 ---
 
 ## 📜 License
 
-Copyright © 2026 — All rights reserved.  
+Copyright © 2026 Talys Matheus Cordeiro Silva — All rights reserved.  
 This project is for **demonstration purposes only**. Unauthorized copying, modification, distribution, or use of this project, in part or in whole, is strictly prohibited.
 
 See [LICENSE](./LICENSE) for details.
