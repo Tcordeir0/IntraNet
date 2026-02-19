@@ -2,7 +2,7 @@
   <a href="./README.md">🇺🇸 English Version</a>
 </p>
 
-<h1 align="center">Logistics Management Hub</h1>
+<h1 align="center">IntraNet</h1>
 <p align="center"><em>Uma plataforma corporativa profissional para gerenciamento de operações logísticas em larga escala.</em></p>
 
 <p align="center">
