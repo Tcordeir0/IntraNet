@@ -26,7 +26,7 @@
 
 ## 📌 Visão Geral
 
-**Logistics Management Hub** é uma plataforma corporativa profissional projetada para gerenciamento de operações em larga escala, centralizando fluxos de trabalho integrados para:
+**IntraNet** é uma plataforma corporativa profissional projetada para gerenciamento de operações em larga escala, centralizando fluxos de trabalho integrados para:
 
 - 🎫 **Sistema de Chamados** — Gerenciamento completo de tickets com fluxos Kanban visuais e rastreamento de SLA por prioridade.
 - 💻 **Monitoramento de Ativos de TI** — Monitoramento em tempo real de hardware e dispositivos com telemetria via agentes WebSocket.

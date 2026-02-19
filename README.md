@@ -26,7 +26,7 @@
 
 ## 📌 Overview
 
-**Logistics Management Hub** is a professional-grade corporate platform designed for high-scale operations management, centralizing integrated workflows for:
+**IntraNet** is a professional-grade corporate platform designed for high-scale operations management, centralizing integrated workflows for:
 
 - 🎫 **Support Ticketing System** — Complete ticket management with visual Kanban workflows and priority-based SLA tracking.
 - 💻 **IT Asset Monitoring** — Real-time hardware and device monitoring with telemetry via WebSocket agents.

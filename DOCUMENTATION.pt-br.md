@@ -207,7 +207,7 @@ Requisição → Rede disponível?
 
 ```json
 {
-  "name": "Logistics Management Hub",
+  "name": "IntraNet",
   "short_name": "IntraNet",
   "display": "standalone",
   "orientation": "portrait",

@@ -101,7 +101,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [1.0.0] — 2026-01-05
 
 ### Added / Adicionado
-- Initial release of the Logistics Management Hub
+- Initial release of the IntraNet
 - Support ticketing system with Kanban board
 - User and department management
 - Inventory control module
